@@ -21,7 +21,7 @@ Created on Tue Oct  1 11:22:32 2024
 import pandas as pd  # Importing the Pandas library for data manipulation
 
 # Load your financial data into a Pandas DataFrame (replace with your actual file path)
-df = pd.read_csv(r'C:\Users\toms\OneDrive\Desktop\CEPHAS\Python\Practice mode\10-k.csv')
+df = pd.read_csv(r'C:\Users\toms\OneDrive\Desktop\CEPHAS\Python\Practice mode\financial_data.csv')
 
 def simple_chatbot(user_query):
     """
