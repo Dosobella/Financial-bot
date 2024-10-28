@@ -2,15 +2,8 @@
 """
 Created on Mon Oct 28 14:21:56 2024
 
-@author: toms
+@author: Dosobella
 """
-
-# -*- coding: utf-8 -*-
-""" 
-Created on Tue Oct  1 11:22:32 2024 
-@author: toms 
-"""
-
 
 # Load your financial data into a Pandas DataFrame (replace with your actual file path)
 import pandas as pd  # Importing the Pandas library for data manipulation
