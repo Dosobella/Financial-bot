@@ -7,7 +7,7 @@ Created on Mon Oct 28 14:21:56 2024
 
 # Load your financial data into a Pandas DataFrame (replace with your actual file path)
 import pandas as pd  # Importing the Pandas library for data manipulation
-df = pd.read_csv(r'C:\Users\toms\OneDrive\Desktop\CEPHAS\Python\Practice mode\financial_data.csv')
+df = pd.read_csv(r'C:\Users\toms\OneDrive\Desktop\CEPHAS\Python\Practice mode\financial data.csv')
 
 
 def simple_chatbot(user_query):
@@ -24,9 +24,9 @@ def simple_chatbot(user_query):
     )  # Convert user query to lowercase for case-insensitive comparison
 
     # Handle query for total revenue
-    if user_query == "what is the total revenue?":
+    if user_query == "what was the overall total revenue for the 3 companies over the 3 years?":
         total_revenue = df['Total Revenue'].sum()
-        return f"The total revenue is $ {total_revenue}"
+        return f"The overall total revenue was $ {total_revenue}"
 
     # Handle query for Apple's net income for a specific year
     elif user_query == "what was the net income for apple in 2022?":
@@ -59,17 +59,17 @@ def simple_chatbot(user_query):
     # Handle query for Tesla's total revenue in 2023
     elif user_query == "what was the total revenue that tesla generated in 2023?":
         total_revenue_tesla_2023 = df[(df['Company'] == 'Tesla') & (
-            df['Year'] == 2023)]['Total Revenue'].sum()
+            df['Year'] == 2023)]['Total Revenue'].values[0]
         return f"The total revenue that Tesla generated in 2023 was $ {total_revenue_tesla_2023}"
 
     # Handle query for the difference between total assets of Tesla and Apple
-    elif user_query == "what is the difference between the value of total assets for tesla and apple?":
-        total_assets_tesla = df[(df['Company'] == 'Tesla')
-                                ]['Total Assets'].sum()
-        total_assets_apple = df[(df['Company'] == 'Apple')
-                                ]['Total Assets'].sum()
+    elif user_query == "how much value of total assets did apple have over tesla in 2022?":
+        total_assets_tesla = df[(df['Company'] == 'Tesla') & (df['Year'] == 2022)
+                                ]['Total Assets'].values[0]
+        total_assets_apple = df[(df['Company'] == 'Apple') & (df['Year'] == 2022)
+                                ]['Total Assets'].values[0]
         difference = total_assets_tesla - total_assets_apple
-        return f"The difference between the total assets of Tesla and Apple is $ {difference}"
+        return f"Apple had $ {difference} in value of total assets than Tesla in 2022 "
 
     # Default response for unrecognized queries
     else:
