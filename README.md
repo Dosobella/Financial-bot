@@ -95,14 +95,19 @@ if __name__ == "__main__":
         print()
 
 
+##Project Highlights
+- **Dynamic Error Handling**: The chatbot is equipped to handle invalid user inputs gracefully, prompting for corrections.
+- **Predefined and Specific Queries**: Allows for specific, predefined queries ensuring accurate and relevant responses.
+- **Extensible Design**: New queries can be added easily by defining additional conditions within the simple_chatbot function.
+
 ## Prerequisites
 - **Python**: Make sure you have Python installed on your machine.
 - **Pandas Library**: Install Pandas using `pip install pandas`.
 - **CSV File**: Have a properly formatted CSV file with relevant financial data.
 
 ## Setup
-1. **Clone the Repository**: `git clone https://github.com/yourusername/financial-data-chatbot.git`
-2. **Navigate to Directory**: `cd financial-data-chatbot`
+1. **Clone the Repository**: `git clone https://github.com/yourusername/financial-bot.git`
+2. **Navigate to Directory**: `cd Financial-bot`
 3. **Install Dependencies**: `pip install pandas`
 
 ## Usage
