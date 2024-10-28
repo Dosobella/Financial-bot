@@ -29,7 +29,7 @@ def simple_chatbot(user_query):
         return f"The overall total revenue was $ {total_revenue}"
 
     # Handle query for Apple's net income for a specific year
-    elif user_query == "what was the net income for apple in 2022?":
+    elif user_query == "what was the net income for apple?":
         years = [2021, 2022, 2023]
         while True:
             year = input('Enter year: ')
